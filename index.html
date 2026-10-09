@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelolaku - Pengelolaan Keuangan</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Kelolaku</h1>
+        <p>Pengelolaan Keuangan Pribadi</p>
+    </header>
+
+
+    <!-- RINGKASAN KEUANGAN -->
+    <section class="ringkasan">
+
+        <h2>Ringkasan Keuangan</h2>
+
+        <table>
+
+            <tr>
+                <td>Uang Bulanan</td>
+                <td id="uangBulanan">Rp0</td>
+            </tr>
+
+            <tr>
+                <td>Total Pemasukan</td>
+                <td id="totalPemasukan">Rp0</td>
+            </tr>
+
+            <tr>
+                <td>Total Pengeluaran</td>
+                <td id="totalPengeluaran">Rp0</td>
+            </tr>
+
+            <tr>
+                <th>Sisa Uang</th>
+                <th id="sisaUang">Rp0</th>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- UANG BULANAN -->
+    <section class="uang-bulanan">
+
+        <h2>Uang Bulanan</h2>
+
+        <p>Masukkan uang yang kamu miliki untuk bulan ini.</p>
+
+        <input
+            type="number"
+            id="inputUangBulanan"
+            placeholder="Contoh: 250000"
+        >
+
+        <button
+            type="button"
+            onclick="simpanUangBulanan()">
+            Simpan Uang Bulanan
+        </button>
+
+    </section>
+
+
+    <!-- TRANSAKSI -->
+    <section class="transaksi">
+
+        <h2>Tambah Transaksi</h2>
+
+        <form id="formTransaksi">
+
+            <label for="jenis">Jenis Transaksi</label>
+
+            <select id="jenis">
+                <option value="masuk">Pemasukan</option>
+                <option value="keluar">Pengeluaran</option>
+            </select>
+
+
+            <label for="jumlah">Jumlah Uang</label>
+
+            <input
+                type="number"
+                id="jumlah"
+                placeholder="Contoh: 50000"
+                required
+            >
+
+
+            <label for="kategori">Kategori</label>
+
+            <select id="kategori">
+                <option value="Uang Saku">Uang Saku</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Transportasi">Transportasi</option>
+                <option value="Belanja">Belanja</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+
+
+            <label for="catatan">Catatan</label>
+
+            <input
+                type="text"
+                id="catatan"
+                placeholder="Contoh: Membeli makan siang"
+            >
+
+
+            <button type="submit">
+                Simpan Transaksi
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- RIWAYAT TRANSAKSI -->
+    <section class="riwayat">
+
+        <h2>Transaksi</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Jenis</th>
+                    <th>Kategori</th>
+                    <th>Catatan</th>
+                    <th>Jumlah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="daftarTransaksi">
+            </tbody>
+
+        </table>
+
+    </section>
+
+<section class="grafik">
+
+    <h2>Grafik Keuangan</h2>
+
+    <canvas id="grafikKeuangan"></canvas>
+
+</section>
+
+    <!-- PERIODE KEUANGAN -->
+    <section class="bulan">
+
+        <h2>Periode Keuangan</h2>
+
+        <button id="bulanSebelumnya">
+            ← Bulan Sebelumnya
+        </button>
+
+        <span id="bulanAktif">
+            Bulan
+        </span>
+
+        <button id="bulanBerikutnya">
+            Bulan Berikutnya →
+        </button>
+
+    </section>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="js/script.js"></script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</html>
