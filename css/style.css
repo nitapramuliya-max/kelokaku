@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+}
+
+.ringkasan {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.ringkasan h2 {
+    margin-top: 0;
+}
+
+.ringkasan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ringkasan td,
+.ringkasan th {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.ringkasan th {
+    font-weight: bold;
+}
+
+.transaksi {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.transaksi h2 {
+    margin-top: 0;
+}
+
+.transaksi form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.transaksi input,
+.transaksi select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.transaksi button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.riwayat {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.riwayat h2 {
+    margin-top: 0;
+}
+
+.riwayat table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.riwayat th,
+.riwayat td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.riwayat th {
+    /* font-weight: bold; */
+}
+
+.bulan {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bulan h2 {
+    margin-top: 0;
+}
+
+.bulan button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+#bulanAktif {
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .ringkasan,
+    .transaksi,
+    .riwayat,
+    .bulan {
+        padding: 15px;
+    }
+
+    .riwayat {
+        overflow-x: auto;
+    }
+
+    .riwayat table {
+        min-width: 600px;
+    }
+
+    .bulan button {
+        margin: 5px;
+    }
+
+}
